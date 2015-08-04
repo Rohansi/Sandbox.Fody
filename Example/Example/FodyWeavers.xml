@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Weavers VerifyAssembly="true">
+  <Sandbox>
+    <ProxyAssembly>bin/Debug/Proxies.dll</ProxyAssembly>
+    <AccessList>
+      <Allow Type="Namespace">System</Allow>
+      <Deny Type="NamespaceStart">System.</Deny>
+    </AccessList>
+    <AccessList>
+      <Allow>System\.Console::ReadLine</Allow>
+      <Deny>System\.Console::</Deny>
+    </AccessList>
+  </Sandbox>
+</Weavers>
