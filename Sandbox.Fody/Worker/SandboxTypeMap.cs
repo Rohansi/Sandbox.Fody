@@ -330,6 +330,9 @@ namespace Sandbox.Fody.Worker
 
         private bool IsBlacklisted(TypeReference type)
         {
+            if (type.IsGenericParameter) // TODO: verify
+                return false;
+
             var typeDef = type.Resolve();
             if (typeDef == null)
                 return true; // TODO: log
